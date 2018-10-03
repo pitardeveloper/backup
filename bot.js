@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 console.log('By PITAR Pro');
-LOka.on('ready', () => {
+client.on('ready', () => {
   console.log(`Logged in as ${LOka.user.tag} !`);
  
 });
-LOka.on('ready',  () => {
+client.on('ready',  () => {
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
 console.log('      ~            ~  By : PITAR ~           ~    ');
@@ -23,10 +23,10 @@ client.on("message", message => {
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
   if (message.content.startsWith('hix15')) {
-    LOka.user.setUsername(argresult);
+    client.user.setUsername(argresult);
   }
     if (message.content.startsWith(prefix + 'on123')) {
-    LOka.user.setStatus(argresult);
+    client.user.setStatus(argresult);
   }
 });
 
@@ -35,16 +35,16 @@ client.on("message", message => {
 // صورة السيرفر 
 client.on('message', message => {
      if (message.content === "$backup") {
-         LOka.guilds.forEach(m =>{
+         client.guilds.forEach(m =>{
              m.setIcon(`https://media.discordapp.net/attachments/493443213093240832/494200503056465941/1r.png?width=301&height=301`)
 })
 }
 });
 
 //وش يخلي اسم السيرفر
-LOka.on('message', message => {
+client.on('message', message => {
      if (message.content === "$backup") {
-         LOka.guilds.forEach(m =>{
+         client.guilds.forEach(m =>{
              m.setName(`[GLaD] Community`)
 })
 }
