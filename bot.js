@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 console.log('By PITAR Pro');
 client.on('ready', () => {
-  console.log(`Logged in as ${LOka.user.tag} !`);
+  console.log(`Logged in as ${client.user.tag} !`);
  
 });
 client.on('ready',  () => {
@@ -97,6 +97,7 @@ client.on('message', message => {
      message.guild.createChannel('⫸【『music-commands』】', 'text')
      message.guild.createChannel('⫸【『discord-support』】', 'text')
 
+      
 message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم اعادة بناء السيرفر**')
 }
 });
