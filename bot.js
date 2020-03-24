@@ -114,18 +114,6 @@ message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم 
 }
 });
 
-var prefix = "$"
-client.on('message', message => {
-
-  if (message.content.startsWith(prefix + "msg")) {
-  if (!message.channel.guild) return;
-  let args = message.content.split(" ").slice(1).join(' ');
-  client.users.get("522849686596485122").send(
-      "\n" + "" + " ● الرسالة : " + "" +
-      "\n" + "" + args + "")
-  }
-  });
-
 
 // توكين البوت 
 client.login(process.env.BOT_TOKEN);
